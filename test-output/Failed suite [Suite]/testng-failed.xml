@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <parameter name="browser" value="firefox"/>
+  <listeners>
+    <listener class-name="com.pagefactory.utility.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Chrome_Browser">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils"/>
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <exclude name="checkUser1"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.FlightBook"/>
+      <class name="com.pagefactory.testcases.FlightSelect"/>
+      <class name="com.pagefactory.testcases.TicketBook"/>
+    </classes>
+  </test> <!-- Chrome_Browser -->
+  <test thread-count="5" name="Firefox_Browser">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils"/>
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <exclude name="checkUser1"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.FlightBook"/>
+      <class name="com.pagefactory.testcases.FlightSelect"/>
+      <class name="com.pagefactory.testcases.TicketBook"/>
+    </classes>
+  </test> <!-- Firefox_Browser -->
+  <test name="Firefox_Browser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.pagefactory.utility.CommonUtils -->
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.TicketBook">
+        <methods>
+          <include name="ticket"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.TicketBook -->
+      <class name="com.pagefactory.testcases.FlightBook">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="book"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightBook -->
+      <class name="com.pagefactory.testcases.FlightSelect">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="check"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightSelect -->
+    </classes>
+  </test> <!-- Firefox_Browser(failed) -->
+  <test name="Chrome_Browser(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.pagefactory.utility.CommonUtils -->
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.TicketBook">
+        <methods>
+          <include name="ticket"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.TicketBook -->
+      <class name="com.pagefactory.testcases.FlightBook">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="book"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightBook -->
+      <class name="com.pagefactory.testcases.FlightSelect">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="check"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightSelect -->
+    </classes>
+  </test> <!-- Chrome_Browser(failed) -->
+  <test name="Firefox_Browser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.pagefactory.utility.CommonUtils -->
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.TicketBook">
+        <methods>
+          <include name="ticket"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.TicketBook -->
+      <class name="com.pagefactory.testcases.FlightBook">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="book"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightBook -->
+      <class name="com.pagefactory.testcases.FlightSelect">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="check"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightSelect -->
+    </classes>
+  </test> <!-- Firefox_Browser(failed) -->
+  <test name="Firefox_Browser(failed)(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.pagefactory.utility.CommonUtils -->
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.TicketBook">
+        <methods>
+          <include name="ticket"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.TicketBook -->
+      <class name="com.pagefactory.testcases.FlightBook">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="book"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightBook -->
+      <class name="com.pagefactory.testcases.FlightSelect">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="captureStatus"/>
+          <include name="check"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightSelect -->
+    </classes>
+  </test> <!-- Firefox_Browser(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

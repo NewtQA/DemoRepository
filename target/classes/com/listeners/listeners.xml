@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNGListenerSuite">
+
+	<listeners>
+		<listener class-name="com.listeners.Listeners"/> 
+	</listeners>
+	
+	<test name="LoginTest">
+	<classes>
+	<class name="com.listeners.LoginTest">
+		<methods>
+			<include name="LoginByEmail"/>
+			<include name="LoginByFacebook"/>
+		</methods>
+	</class>
+	</classes>
+	</test>
+	
+</suite>

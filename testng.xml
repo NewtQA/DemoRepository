@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.pagefactory.utility.Listeners"/> 
+	</listeners>
+	
+ <!-- <test thread-count="5" name="Chrome_Browser">
+ <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils"/>
+      <class name="com.pagefactory.testcases.SignIn">
+      <methods>
+      <include name="checkUser"/>
+      <exclude name="validateUser"/>
+      </methods>
+      </class>
+      <class name="com.pagefactory.testcases.FlightBook"/>
+      <class name="com.pagefactory.testcases.FlightSelect"/>
+      <class name="com.pagefactory.testcases.TicketBook"/>
+      <class name="com.pagefactory.testcases.SignOut"/>
+     </classes>
+   </test> --> 
+   <test thread-count="5" name="Firefox_Browser">
+ <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils"/>
+      <class name="com.pagefactory.testcases.SignIn">
+      <methods>
+      <include name="checkUser"/>
+      <include name="validateUser"/>
+      </methods>
+      </class>
+      <class name="com.pagefactory.testcases.FlightBook"/>
+      <class name="com.pagefactory.testcases.FlightSelect"/>
+      <class name="com.pagefactory.testcases.TicketBook"/>
+      <class name="com.pagefactory.testcases.SignOut"/>
+    </classes>
+  </test>
+ </suite>

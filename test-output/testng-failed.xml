@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <listeners>
+    <listener class-name="com.pagefactory.utility.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Firefox_Browser">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils"/>
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <include name="validateUser"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.FlightBook"/>
+      <class name="com.pagefactory.testcases.FlightSelect"/>
+      <class name="com.pagefactory.testcases.TicketBook"/>
+      <class name="com.pagefactory.testcases.SignOut"/>
+    </classes>
+  </test> <!-- Firefox_Browser -->
+  <test name="Firefox_Browser(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.pagefactory.utility.CommonUtils">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.pagefactory.utility.CommonUtils -->
+      <class name="com.pagefactory.testcases.SignIn">
+        <methods>
+          <include name="checkUser"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignIn -->
+      <class name="com.pagefactory.testcases.TicketBook">
+        <methods>
+          <include name="ticket"/>
+          <include name="captureStatus"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.TicketBook -->
+      <class name="com.pagefactory.testcases.SignOut">
+        <methods>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.SignOut -->
+      <class name="com.pagefactory.testcases.FlightBook">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="book"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightBook -->
+      <class name="com.pagefactory.testcases.FlightSelect">
+        <methods>
+          <include name="captureStatus"/>
+          <include name="check"/>
+        </methods>
+      </class> <!-- com.pagefactory.testcases.FlightSelect -->
+    </classes>
+  </test> <!-- Firefox_Browser(failed) -->
+</suite> <!-- Failed suite [Suite] -->
